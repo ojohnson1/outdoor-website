@@ -1,0 +1,17 @@
+.navbar{
+    font-family: 'Cinzel','san-serif';
+}
+
+
+/* This styling allows the video to span the width of the wedsite*/
+.video-card {
+    height:400px;
+    z-index: -1;
+  }
+  
+  video{
+  
+  width: 100%; 
+  height:100%
+  }
+
