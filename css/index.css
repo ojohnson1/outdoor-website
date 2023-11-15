@@ -4,9 +4,7 @@
 
 
 
-
-
-
+/*Header Section*/
 /* This styling allows the video to span the width of the wedsite*/
 .video-card {
     height:400px;
@@ -20,7 +18,21 @@
   }
 
 
+/*Main Section*/
 
+.intro-text,button,.picks-of-the-week-text1,.picks-of-the-week-text2{
+    font-family: 'Montserrat', sans-serif;
+  
+  }
+  .picks-of-the-week-text1{
+    background-color:#F5F5DC  ;
+  }
+  .picks-of-the-week-text2{
+    background-color: #26453E ;
+    
+  
+  }
+  
 
 
   /*Footer Section*/
