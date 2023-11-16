@@ -1,9 +1,11 @@
 "use strict";
-const radioBtns= document.querySelectorAll("input [name='flexRadio'] :checked");
+// html element variables
 const locationList = document.getElementById("locationList");
 const displayParkDiv = document.getElementById("parkDisplay");
 const parkTypeList = document.getElementById("parkTypeList");
-
+const locationRadio = document.getElementById("location");
+const parkTypeRadio = document.getElementById("parkType");
+const seeAllRadio = document.getElementById("seeAll");
 //this happens when the page is "ready" all loaded in the browser, it's the first of our code to run..
 window.onload = function () {
   initLocationDropdown();
