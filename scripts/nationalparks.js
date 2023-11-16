@@ -23,7 +23,7 @@ function onSelectionTypeChosen() {
     displayParkDiv.replaceChildren("");
     locationList.style.display = "block";
     parkTypeList.style.display = "none";
-   locationList.selectedIndex=0;
+   locationList.selectedIndex=0; // this causes the selected to return to the first option in the dropdown list if the dropdown was already used
  
   } else if (parkTypeRadio.checked) {
     displayParkDiv.replaceChildren("");
