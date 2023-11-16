@@ -38,11 +38,12 @@ function onMountainSelectionChanged(){
 
 function addMountainToCard(info) {
     let cardItemDiv = document.createElement("div");
-    cardItemDiv.className = "card rounded-0";
+    cardItemDiv.className = "card";
     displayMountain.appendChild(cardItemDiv);
     let cardImg = new Image()
     cardImg.src= `images/${info.img}`
-    cardImg.className="card-img-top rounded-0"
+    cardImg.className="card-img-top" 
+
     cardItemDiv.appendChild(cardImg)
 
     let cardBody = document.createElement("div");
