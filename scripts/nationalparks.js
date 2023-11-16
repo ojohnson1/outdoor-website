@@ -10,9 +10,34 @@ window.onload = function () {
   initParkTypeDropdown();
   locationList.onchange = onLocationListSelectionChanged;
   parkTypeList.onchange = onParkTypeSelectionChanged;
-
+  locationRadio.onchange = onSelectionTypeChosen;
+  parkTypeRadio.onchange = onSelectionTypeChosen;
+  seeAllRadio.onchange = onSelectionTypeChosen;
+  parkTypeList.style.display = "none";
+  locationList.style.display = "none";
 };
 
+//this happens when a radio button is selected
+function onSelectionTypeChosen() {
+  if (locationRadio.checked) {
+    displayParkDiv.replaceChildren("");
+    locationList.style.display = "block";
+    parkTypeList.style.display = "none";
+   locationList.selectedIndex=0;
+ 
+  } else if (parkTypeRadio.checked) {
+    displayParkDiv.replaceChildren("");
+    parkTypeList.style.display = "block";
+    locationList.style.display = "none";
+    parkTypeList.selectedIndex=0;
+    
+  } else {
+    displayParkDiv.replaceChildren("");
+    parkTypeList.style.display = "none";
+    locationList.style.display = "none";
+    nationalParksArray.forEach((element) => addParkToCard(element));
+  }
+}
 
 
 
