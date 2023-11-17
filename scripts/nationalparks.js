@@ -33,7 +33,7 @@ function onSelectionTypeChosen() {
     locationList.style.display = "none";
     parkTypeList.selectedIndex=0;
     
-  } else {
+  } else if (seeAllRadio.checked){
     displayParkDiv.replaceChildren("");
     parkTypeList.style.display = "none";
     locationList.style.display = "none";

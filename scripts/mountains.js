@@ -66,14 +66,14 @@ function addMountainToCard(info) {
     let cardElevationParagraph = document.createElement("p");
     cardElevationParagraph.className = "card-text";
     cardBody.appendChild(cardElevationParagraph);
-    let cardElevationParagraphText = document.createTextNode(`Elevation:${info.elevation}`);
+    let cardElevationParagraphText = document.createTextNode(`Elevation: ${info.elevation}`);
     cardElevationParagraph.appendChild(cardElevationParagraphText);
   
     let cardEffortParagraph = document.createElement("p");
     cardEffortParagraph.className = "card-text";
     cardBody.appendChild(cardEffortParagraph);
     let cardEffortParagraphText = document.createTextNode(
-      `Skill Level:${info.effort}`
+      `Skill Level: ${info.effort}`
     );
     cardEffortParagraph.appendChild(cardEffortParagraphText);
   }
