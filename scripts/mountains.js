@@ -1,8 +1,8 @@
 "use strict"
-
+//HTML Elements
 const mountainList=document.getElementById('mountainList')
 
-
+//this happens when the page is "ready" all loaded in the browser, it's the first of our code to run..
 window.onload = function (){
 initMountainDropdown();
 mountainList.onchange=onMountainSelectionChanged;
@@ -13,7 +13,7 @@ getSunsetForMountain();
 
 
 
-
+//this is the dropdown populated with no selection
 function initMountainDropdown(){
     for (let mountain of mountainsArray) {
         let TheOption = new Option(mountain.name);
@@ -24,7 +24,7 @@ function initMountainDropdown(){
 
 
 
-
+//this happens when a new value is selected in the location dropdown
 async function onMountainSelectionChanged(){
    
         displayMountain.replaceChildren("");
@@ -43,7 +43,7 @@ async function onMountainSelectionChanged(){
         addMountainToCard(selectedMountain,sunsetData); }
 
      
-
+// Bootstrap card created programmatically that each object selected is displayed in
 function addMountainToCard(info,sunsetData) {
     let cardItemDiv = document.createElement("div");
     cardItemDiv.className = "card";
