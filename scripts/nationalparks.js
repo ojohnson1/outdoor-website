@@ -25,23 +25,19 @@ function onSelectionTypeChosen() {
     displayParkDiv.replaceChildren("");
     locationList.style.display = "block";
     parkTypeList.style.display = "none";
-   locationList.selectedIndex=0; // this causes the selected to return to the first option in the dropdown list if the dropdown was already used
- 
+    locationList.selectedIndex = 0; // this causes the selected to return to the first option in the dropdown list if the dropdown was already used
   } else if (parkTypeRadio.checked) {
     displayParkDiv.replaceChildren("");
     parkTypeList.style.display = "block";
     locationList.style.display = "none";
-    parkTypeList.selectedIndex=0;
-    
-  } else if (seeAllRadio.checked){
+    parkTypeList.selectedIndex = 0;
+  } else if (seeAllRadio.checked) {
     displayParkDiv.replaceChildren("");
     parkTypeList.style.display = "none";
     locationList.style.display = "none";
     nationalParksArray.forEach((element) => addParkToCard(element));
   }
 }
-
-
 
 //this is called from window.onload
 function initLocationDropdown() {
@@ -59,7 +55,6 @@ function initParkTypeDropdown() {
   }
 }
 
-
 //this happens when a new value is selected in the location dropdown
 function onLocationListSelectionChanged() {
   displayParkDiv.replaceChildren("");
@@ -76,15 +71,15 @@ function onParkTypeSelectionChanged() {
   displayParkDiv.replaceChildren("");
   let selectedValue = parkTypeList.value;
   let specifiedParkType = nationalParksArray.filter((location) =>
-    location.LocationName.toLocaleLowerCase().includes(selectedValue.toLocaleLowerCase())
-   
+    location.LocationName.toLocaleLowerCase().includes(
+      selectedValue.toLocaleLowerCase()
+    )
   );
   specifiedParkType.forEach((element) => addParkToCard(element));
 }
 
 //this happens when it is called explicitely from code.
 function addParkToCard(location) {
-  
   let cardItemDiv = document.createElement("div");
   cardItemDiv.className = "card";
   parkDisplay.appendChild(cardItemDiv);
