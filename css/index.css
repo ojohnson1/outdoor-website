@@ -1,7 +1,15 @@
+body{
+  background-color: #728c69;
+}
+
 .navbar,.navbar-brand{
     font-family: 'Cinzel','san-serif';
 }
 
+.nav-link{
+  color: black;
+
+}
 
 
 /*Header Section*/

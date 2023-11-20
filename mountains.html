@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,11 +13,11 @@
 </head>
 
 <body>
-    <header>
+    <header >
         <!-- the fixed top allows for the video and navbar to overlap -->
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg opacity-75">
             <div class="container-fluid">
-                <a class="navbar-brand active " aria-current="page" href="#"> The Green Escape</a>
+                <a class="navbar-brand active "  href="index.html"> The Green Escape</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -24,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="nationalparks.html">National Parks</a>
-                        <a class="nav-link" href="mountains.html">Mountains</a>
+                        <a class="nav-link active" aria-current="page" href="mountains.html">Mountains</a>
                         <a class="nav-link" href="#">FAQ</a>
 
                     </div>
@@ -34,15 +36,15 @@
     </header>
     <main>
         <div class="container">
-            <h2 class="display-5 mt-5"> Plan Your Next Hike</h2>
+            <h2 class="display-5 mt-5 text-white"> Plan Your Next Hike</h2>
             <div class="row mt-4">
-                <div class="col-3">
+                <div class="col-sm-12 mb-3 col-lg-3">
                     <select id=mountainList class="form-select  " aria-label="Default select example">
                         <option selected>Find A Mountain </option>
 
                     </select>
                 </div>
-                <div class="col-7" id="displayMountain">
+                <div class="col-sm-12 col-lg-7 " id="displayMountain">
 
                 </div>
 
@@ -63,13 +65,17 @@
         </div>
 
     </footer>
+
+    <script src="scripts/mountains.js"></script>
+    <script src="scripts/DataScripts/mountainData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    
+
+
 </body>
 
 
-<script src="scripts/mountains.js"></script>
-<script src="scripts/DataScripts/mountainData.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
 
 </html>

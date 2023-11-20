@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Cinzel:wght@600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/nationalparks.css">
 
-    <title>Document</title>
+    <title>The Green Escape</title>
 </head>
 
 
 <body>
     <header>
 
-        <nav class="navbar navbar-expand-lg  ">
+        <nav class="navbar navbar-expand-lg opacity-75 ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"> The Green Escape</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,7 +29,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active"  aria-current="page" href="#">National Parks</a>
+                        <a class="nav-link active" aria-current="page" href="#">National Parks</a>
                         <a class="nav-link" href="mountains.html">Mountains</a>
                         <a class="nav-link" href="#">FAQ</a>
 
@@ -43,46 +43,46 @@
 
     <main>
         <div class="container ">
-           
-                <h1 class=" mt-3 display-5"> Find A Park </h1>
-          
-            <div class="row mt-5 d-flex justify-content-center align-items-center ">
-               
 
-                <div class="class col-3">
+            <h1 class=" mt-3 display-5 text-white"> Find A Park </h1>
+
+            <div class="row mt-5 d-flex justify-content-center align-items-center ">
+
+
+                <div class="col-sm-12 col-lg-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadio" id="seeAll" checked  required>
-                        <label class="form-check-label" for="seeAllRadio">
+                        <input class="form-check-input" type="radio" name="flexRadio" id="seeAllRadio" checked required>
+                        <label class="form-check-label text-white" for="seeAllRadio">
                             See All Parks
                         </label>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class=" col-sm-12 col-lg-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadio" id="location" required>
-                        <label class="form-check-label" for="locationRadio">
+                        <input class="form-check-input" type="radio" name="flexRadio" id="locationRadio" required>
+                        <label class="form-check-label text-white" for="locationRadio">
                             Select By Location
                         </label>
                     </div>
 
 
                 </div>
-                <div class="col-3  d-flex justify-content-center">
+                <div class=" col-sm-12 col-lg-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadio" id="parkType" required>
-                        <label class="form-check-label" for="parkTypeRadio">
+                        <input class="form-check-input" type="radio" name="flexRadio" id="parkTypeRadio" required>
+                        <label class="form-check-label text-white" for="parkTypeRadio">
                             Select By Park Type
                         </label>
                     </div>
 
 
                 </div>
-                <div class="class col-6">
+                <div class="col-sm-12 col-lg-6">
                     <select class="form-select" id="locationList" aria-label="select locations for National Parks">
                         <option selected>Select a Location</option>
                     </select>
                 </div>
-                <div class="class col-6">
+                <div class="col-sm-12 col-lg-6">
                     <select class="form-select" id="parkTypeList" aria-label="select type of park for National Parks">
                         <option selected>Select a Park Type</option>
                     </select>
@@ -106,13 +106,16 @@
         </div>
 
     </footer>
+   
+   
+    <script src="scripts/Datascripts/nationalParkData.js"></script>
+    <script src="scripts/Datascripts/parkTypeData.js"></script>
+    <script src="scripts/nationalparks.js"></script>
+    <script src="scripts/Datascripts/locationData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
-<script src="scripts/Datascripts/nationalParkData.js"></script>
-<script src="scripts/Datascripts/parkTypeData.js"></script>
-<script src="scripts/nationalparks.js"></script>
-<script src="scripts/Datascripts/locationData.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+
 
 </html>

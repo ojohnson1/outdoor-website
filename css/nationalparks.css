@@ -16,11 +16,15 @@ main{
 
 
 
+body{
+    background-color: #728c69;
+}
 
 
-
-
-
+.card-body{
+    background-color: #26453E ;
+    color: #FFFFFF;
+}
 
 
 

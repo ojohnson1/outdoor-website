@@ -6,6 +6,7 @@ const mountainList=document.getElementById('mountainList')
 window.onload = function (){
 initMountainDropdown();
 mountainList.onchange=onMountainSelectionChanged;
+getSunsetForMountain();
 }
 
 
@@ -21,7 +22,10 @@ function initMountainDropdown(){
       }
 }
 
-function onMountainSelectionChanged(){
+
+
+
+async function onMountainSelectionChanged(){
    
         displayMountain.replaceChildren("");
         
@@ -30,13 +34,17 @@ function onMountainSelectionChanged(){
          let selectedMountain = mountainsArray.find(
            (mountain) => mountain.name === selectedValue
          );
-        addMountainToCard(selectedMountain); }
+        
+         const sunsetData = await  getSunsetForMountain (
+         selectedMountain.coords.lat,
+         selectedMountain.coords.lng
+         )
+      
+        addMountainToCard(selectedMountain,sunsetData); }
 
+     
 
-    
-
-
-function addMountainToCard(info) {
+function addMountainToCard(info,sunsetData) {
     let cardItemDiv = document.createElement("div");
     cardItemDiv.className = "card";
     displayMountain.appendChild(cardItemDiv);
@@ -76,4 +84,33 @@ function addMountainToCard(info) {
       `Skill Level: ${info.effort}`
     );
     cardEffortParagraph.appendChild(cardEffortParagraphText);
+
+    let cardSunRiseParagraph = document.createElement("p");
+    cardSunRiseParagraph.className = "card-text";
+    cardBody.appendChild(cardSunRiseParagraph);
+    let cardSunRiseParagraphText = document.createTextNode(
+      `Sunrise: ${sunsetData.results.sunrise} (UTC)`
+    );
+    cardSunRiseParagraph.appendChild(cardSunRiseParagraphText);
+
+    let cardSunSetParagraph = document.createElement("p");
+    cardSunSetParagraph.className = "card-text";
+    cardBody.appendChild(cardSunSetParagraph);
+    let cardSunSetParagraphText = document.createTextNode(
+      `Sunset: ${sunsetData.results.sunset} (UTC)`
+    );
+    cardSunSetParagraph.appendChild(cardSunSetParagraphText);
+
+  
   }
+
+
+  // Sunset and Sunrise
+
+  // function that can "fetch" the sunrise/sunset times
+async function getSunsetForMountain(lat, lng){
+  let response = await fetch(
+  `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`);
+  let data = await response.json();
+  return data;
+  } 

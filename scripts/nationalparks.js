@@ -3,9 +3,9 @@
 const locationList = document.getElementById("locationList");
 const displayParkDiv = document.getElementById("parkDisplay");
 const parkTypeList = document.getElementById("parkTypeList");
-const locationRadio = document.getElementById("location");
-const parkTypeRadio = document.getElementById("parkType");
-const seeAllRadio = document.getElementById("seeAll");
+const locationRadio = document.getElementById("locationRadio");
+const parkTypeRadio = document.getElementById("parkTypeRadio");
+const seeAllRadio = document.getElementById("seeAllRadio");
 //this happens when the page is "ready" all loaded in the browser, it's the first of our code to run..
 window.onload = function () {
   initLocationDropdown();
@@ -84,6 +84,7 @@ function onParkTypeSelectionChanged() {
 
 //this happens when it is called explicitely from code.
 function addParkToCard(location) {
+  
   let cardItemDiv = document.createElement("div");
   cardItemDiv.className = "card";
   parkDisplay.appendChild(cardItemDiv);
